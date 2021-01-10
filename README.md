@@ -19,7 +19,6 @@ This repository contains by the general frontend web file structure conventions 
 
 ```
 project-repo-name
-└───.storybook
 |
 └───node_modules
 |
@@ -92,31 +91,3 @@ project-repo-name
 - **components**
 
   - The top level components folder is used to store components that will be used throughout the app. If a component is used in more than one container, then it should be in this folder.
-
-## Storybook
-
-Storybook is a tool that allows you to work on and view individual components without having to build an entire page to do so. This becomes very useful as the project grows larger and you are required to navigate 2 or 3 levels deep to even get to the page your component is on (especially when you're restyling minute details like font-size or widths).
-
-#### Running Storybook
-
-In order to use Storybook you can simply run the following command
-
-```bash
-$ npm run storybook
-```
-
-This will launch a storybook window in your default browser on localhost:9009. If you would like to view storybook in a different browser, you can simply open that browser and go to localhost:9009.
-
-#### Creating Stories
-
-In order to create stories, create a new file in your component's directory called `story.js` (on the same level as index.js). Your file will look something like this:
-
-```javascript
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import MyComponent from '../components/MyComponent'
-
-storiesOf('MyScreen', module).add('MyComponent', () => <MyComponent />)
-```
-
-This file tells storybook what to display and how to organize the stories. For the storiesOf parameter, always put the name of the screen it will go on and in the .add parameter, always put the name of component (and maybe some extra info if neccessary about the specific use case of the component).
