@@ -58,10 +58,6 @@ project-repo-name
 
 ### Important Directories and Files
 
-- **.storybook**
-
-  - Used to configure storybook for the project. If you ever needed to make something globally accessible to all stories, such as the theme, it would go in here.
-
 - **public**
 
   - Used to store the root html and css files, favicon, etc.
