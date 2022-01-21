@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  background: #f0f5f8;
+  font-family: 'Rubik', sans-serif;
+  // overflow-y: hidden;
+}
+
+.flex-horizontal-spaced {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lock-overflow {
+  overflow-y: hidden;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@import "./login";
+@import "./mainContainer";
+@import "./myArtistsContainer";
+@import "./menu";
+@import "./nav";
+@import "./result";
+@import "./input";
+@import "./buttons";
+@import "./favorite";
+@import "./sliderWindow";
+@import "./checkboxs";
+@import "./animations";
+@import "./infowindow";

@@ -1,23 +1,31 @@
-import React from 'react'
-import { ApolloProvider } from '@apollo/react-hooks'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
-import theme from './theme'
-import client from './client'
-import Home from './containers/Home'
+import React, { useState } from "react";
+import MainLayout from "./MainLayout";
+import Login from "./components/Login";
+import InfoWindow from "./components/InfoWindow";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./styles/app.scss";
 
-const App = () => (
-  <Router>
-    <ThemeProvider theme={theme}>
-      <ApolloProvider client={client}>
-        <div className="App">
-          <Switch>
-            <Route path="/" component={Home} />
-          </Switch>
-        </div>
-      </ApolloProvider>
-    </ThemeProvider>
-  </Router>
-)
+function App() {
+  const [InfoWindowShowing, setInfoWindowShowing] = useState(false);
 
-export default App
+  return (
+    <div className={InfoWindowShowing ? "lock-overflow" : null}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <InfoWindow
+              InfoWindowShowing={InfoWindowShowing}
+              setInfoWindowShowing={setInfoWindowShowing}
+            />
+            <MainLayout setInfoWindowShowing={setInfoWindowShowing} />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
+}
+
+export default App;

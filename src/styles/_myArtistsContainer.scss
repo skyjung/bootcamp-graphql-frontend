@@ -1,0 +1,35 @@
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+.ui.segment {
+  padding: 0;
+}
+.ui.secondary.pointing.menu {
+  border-bottom: none;
+}
+
+.selector-words-container {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px 0;
+  .selector-word-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .selector-word {
+    margin: 0px 20px;
+    cursor: pointer;
+  }
+  .active {
+    font-weight: 800;
+  }
+}
+
+.playlist-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  transition: 0.3s all ease;
+}

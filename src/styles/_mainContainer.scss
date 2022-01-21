@@ -1,0 +1,71 @@
+.main-container {
+  margin-left: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f8f0;
+  transition: all 0.35s;
+  height: 102vh;
+  animation: 0.3s ease-out 0s 1 slideInBottom;
+  .main-header {
+    position: absolute;
+    top: 430px;
+    margin-left: 30px;
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+    z-index: 5000;
+  }
+  .favorite-add-btn-sticky-btm {
+    background: white;
+    padding-right: 2rem;
+    transition: all 0.35s;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    box-shadow: 2px 2px 50px rgb(206, 206, 206);
+    width: 100%;
+    height: 70px;
+    z-index: 20;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.no-margin {
+  margin-left: 0rem;
+}
+.container {
+  background: white;
+  padding: 2rem;
+  width: 90%;
+  box-shadow: 2px 2px 50px rgb(206, 206, 206);
+  position: relative;
+  max-width: 1200px;
+}
+
+.main-image-wrapper {
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #90e784;
+  // background-image: url("/dj.jpg");
+}
+.main-image-wrapper img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    .main-header {
+      font-size: 24px;
+    }
+  }
+}
